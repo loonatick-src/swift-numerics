@@ -167,11 +167,13 @@ extension Float80: Real {
   }
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedAdd(_ a: Float80, _ b: Float80) -> Float80 {
     _numerics_relaxed_addl(a, b)
   }
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedMul(_ a: Float80, _ b: Float80) -> Float80 {
     _numerics_relaxed_mull(a, b)
   }

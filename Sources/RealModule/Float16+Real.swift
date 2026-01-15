@@ -178,11 +178,13 @@ extension Float16: Real {
   // that these use. TODO: implement these as Swift builtins instead.
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedAdd(_ a: Float16, _ b: Float16) -> Float16 {
     _numerics_relaxed_addf16(a, b)
   }
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedMul(_ a: Float16, _ b: Float16) -> Float16 {
     _numerics_relaxed_mulf16(a, b)
   }

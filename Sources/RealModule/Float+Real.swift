@@ -194,11 +194,13 @@ extension Float: Real {
   #endif
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedAdd(_ a: Float, _ b: Float) -> Float {
     _numerics_relaxed_addf(a, b)
   }
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedMul(_ a: Float, _ b: Float) -> Float {
     _numerics_relaxed_mulf(a, b)
   }

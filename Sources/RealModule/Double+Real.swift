@@ -221,11 +221,13 @@ extension Double: Real {
 #endif
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedAdd(_ a: Double, _ b: Double) -> Double {
     _numerics_relaxed_add(a, b)
   }
   
   @_transparent
+  @_effects(readnone)
   public static func _relaxedMul(_ a: Double, _ b: Double) -> Double {
     _numerics_relaxed_mul(a, b)
   }
